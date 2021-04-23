@@ -2,6 +2,13 @@
 plugin: constructed
 strict: True
 
+compose:
+  from_inventory: inventory_source | d("static")
+
 groups:
   some_hosts: inventory_hostname.startswith('some-host')
   other_hosts: inventory_hostname.startswith('other-host')
+
+keyed_groups:
+  - prefix: sourced_from
+    key: from_inventory

@@ -13,4 +13,7 @@ class InventoryModule(BaseInventoryPlugin):
     def parse(self, inventory, loader, path, cache=True):
         super(InventoryModule, self).parse(inventory, loader, path, cache)
 
-        [self.inventory.add_host(f"some-host{x}.domain") for x in range(1, 5)]
+        for i in range(1,5):
+            hostname = f"some-host{i}.domain"
+            self.inventory.add_host(hostname)
+            self.inventory.set_variable(hostname, "inventory_source", "some")
