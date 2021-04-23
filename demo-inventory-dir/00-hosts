@@ -1,0 +1,5 @@
+[some_hosts]
+some-statically-defined.foobar
+
+[other_hosts]
+other-statically-defined.foobar

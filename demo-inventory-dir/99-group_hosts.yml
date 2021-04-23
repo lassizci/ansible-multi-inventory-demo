@@ -1,0 +1,7 @@
+---
+plugin: constructed
+strict: True
+
+groups:
+  some_hosts: inventory_hostname.startswith('some-host')
+  other_hosts: inventory_hostname.startswith('other-host')
